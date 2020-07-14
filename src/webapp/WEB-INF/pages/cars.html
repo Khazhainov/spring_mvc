@@ -3,24 +3,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title></title>
 </head>
 <body>
-<h1 th:text="${header}"/>
-<table>
-    <thead>
-    <tr>
-        <th th:text="${brand}"/>
-        <th th:text="${carModel}"/>
-        <th th:text="${year}"/>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="car : ${cars}">
-        <td><span th:text="${car.brand}"/>
-        <td><span th:text="${car.model}"/>
-        <td><span th:text="${car.year}"/>
-    </tr>
-    </tbody>
-</table>
+    <h1 th:text="${header}"/>
+    <table>
+        <thead>
+        <tr>
+            <th th:text="${brand}"/>
+            <th th:text="${model}"/>
+            <th th:text="${year}"/>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="car : ${cars}">
+            <td><span th:text="${car.brand}"/>
+            <td><span th:text="${car.model}"/>
+            <td><span th:text="${car.year}"/>
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
