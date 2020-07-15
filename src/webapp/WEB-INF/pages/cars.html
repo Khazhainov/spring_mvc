@@ -6,22 +6,21 @@
     <title></title>
 </head>
 <body>
-    <h1 th:text="${header}"/>
+    <h1 th:text="#{header}"></h1>
     <table>
         <thead>
         <tr>
-            <th th:text="${brand}"/>
-            <th th:text="${model}"/>
-            <th th:text="${year}"/>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Year</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="car : ${cars}">
-            <td><span th:text="${car.brand}"/>
-            <td><span th:text="${car.model}"/>
-            <td><span th:text="${car.year}"/>
+            <td><span th:text="${car.brand}"></span>
+            <td><span th:text="${car.model}"></span>
+            <td><span th:text="${car.year}"></span>
         </tr>
         </tbody>
     </table>
 </body>
-</html>

@@ -10,12 +10,7 @@ import web.service.CarService;
 public class CarController {
 
     @GetMapping(value = "/cars")
-    public String printCarList(@RequestParam(value = "locale", required = false) String locale,
-                               ModelMap model) {
-        model.addAttribute("header", (locale != null && locale.equals("en")) ? "CARS" : "МАШИНЫ");
-        model.addAttribute("brand",(locale != null && locale.equals("en")) ? "Brand" : "Бренд");
-        model.addAttribute("model", (locale != null && locale.equals("en")) ? "Model" : "Модель");
-        model.addAttribute("year", (locale != null && locale.equals("en")) ? "Year" : "Год");
+    public String printCarList(ModelMap model) {
         model.addAttribute("cars", CarService.getCars());
         return "cars";
     }
